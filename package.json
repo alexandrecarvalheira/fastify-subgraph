@@ -4,7 +4,9 @@
   "description": "A Fastify example to deploy to Render",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "tsc -p tsconfig.json | node app.js",
+    "build": "tsc -p tsconfig.json",
+    "dev": "nodemon app.ts"
   },
   "repository": {
     "type": "git",
@@ -17,9 +19,17 @@
   },
   "homepage": "https://github.com/render-examples/fastify-hello-world#readme",
   "dependencies": {
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
     "fastify": "^4.17.0"
   },
   "engines": {
     "node": "18.x"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
   }
 }
