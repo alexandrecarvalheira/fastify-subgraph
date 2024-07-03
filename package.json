@@ -4,7 +4,7 @@
   "description": "A Fastify example to deploy to Render",
   "main": "app.js",
   "scripts": {
-    "start": "tsc -p tsconfig.json | node app.js",
+    "start": "node app.js",
     "build": "tsc -p tsconfig.json",
     "dev": "nodemon app.ts"
   },
